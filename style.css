@@ -38,7 +38,6 @@ body {
 
 .text p {
   font-size: 16px;
-  /* max-width: 85%; */
 }
 
 .text ul {
@@ -60,6 +59,10 @@ body {
   border: 1px solid grey;
 }
 
+.text form input.invalid {
+  border: 1px solid rgb(244, 46, 46);
+}
+
 .text form button {
   padding: 1rem 1.5rem;
   border-radius: 12px;
@@ -71,9 +74,38 @@ body {
 .text form button:hover {
   background-image: linear-gradient(to right, #fe693e, #ff5476);
 }
-/* 
-.text form label::after {
-  content: "Valid email required";
-  color: rgb(247, 75, 75);
-  position: relative;
-} */
+
+.success {
+  max-width: 470px;
+  padding: 3.5rem;
+  border-radius: 20px;
+}
+
+.success img {
+  width: 50px;
+  margin-bottom: 2rem;
+}
+
+.success h1 {
+  font-size: 55px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 55px;
+}
+
+.success p {
+  font-size: 16px;
+  margin: 1.5rem 0;
+}
+
+.success button {
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: none;
+  background-color: var(--dark-slate-grey);
+  color: white;
+}
+
+.success button:hover {
+  background-image: linear-gradient(to right, #fe693e, #ff5476);
+}
