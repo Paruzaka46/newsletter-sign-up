@@ -34,15 +34,21 @@ body {
   font-weight: 700;
   font-size: 3.5rem;
   margin: 0;
+  color: var(--dark-slate-grey);
 }
 
 .text p {
   font-size: 16px;
+  color: var(--dark-slate-grey);
 }
 
 .text ul {
   list-style-image: url(assets/images/icon-list.svg);
   margin-bottom: 2rem;
+}
+
+.text ul li {
+  color: var(--dark-slate-grey);
 }
 
 .text ul li:nth-child(2) {
@@ -51,16 +57,17 @@ body {
 
 .text form label {
   font-size: 16px;
+  color: var(--dark-slate-grey);
 }
 
 .text form input {
   padding: 1rem 1.5rem;
   border-radius: 12px;
-  border: 1px solid grey;
+  border: 1px solid var(--dark-slate-grey);
 }
 
 .text form input.invalid {
-  border: 1px solid rgb(244, 46, 46);
+  border: 1px solid #dc3545;
 }
 
 .text form button {
@@ -91,11 +98,13 @@ body {
   font-weight: bold;
   margin: 0;
   line-height: 55px;
+  color: var(--dark-slate-grey);
 }
 
 .success p {
   font-size: 16px;
   margin: 1.5rem 0;
+  color: var(--dark-slate-grey);
 }
 
 .success button {
@@ -104,8 +113,85 @@ body {
   border: none;
   background-color: var(--dark-slate-grey);
   color: white;
+  width: 100%;
 }
 
 .success button:hover {
   background-image: linear-gradient(to right, #fe693e, #ff5476);
+}
+
+@media (max-width: 768px) {
+  .image .desktop {
+    display: none;
+  }
+
+  .image .mobile {
+    display: inline-block !important;
+    width: 500px;
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    padding: 0 !important;
+    width: 500px;
+    border-radius: 0;
+  }
+
+  .text {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    background-color: white;
+  }
+
+  .image .mobile {
+    display: inline-block !important;
+    max-width: 400px;
+  }
+
+  .container {
+    max-width: 400px;
+  }
+
+  .text h1 {
+    font-size: 40px;
+  }
+
+  .text p {
+    width: 300px;
+  }
+
+  .text ul li {
+    padding-left: 10px;
+  }
+
+  form .labeling label {
+    width: 130px;
+  }
+
+  form .labeling p {
+    text-align: end;
+    width: 200px;
+  }
+
+  .success {
+    padding: 1.5rem;
+  }
+
+  .success img {
+    margin-top: 50px;
+  }
+
+  .success h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .success button {
+    margin-top: 200px;
+    width: 100%;
+  }
 }
